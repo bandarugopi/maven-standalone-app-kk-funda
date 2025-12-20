@@ -1,4 +1,4 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+i<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
@@ -18,7 +18,7 @@
 	<description>Maven Standalone Application</description>
 
 	<properties>
-		<sonar.host.url>http://15.206.74.200:9000/</sonar.host.url>
+		<sonar.host.url>http://3.110.128.148:9000/</sonar.host.url>
 		<sonar.login>admin</sonar.login>
 		<sonar.password>admin</sonar.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,6 +36,22 @@
 		</dependency>
 
 	</dependencies>
+	<distributionManagement>
+
+	    <repository>
+	      <id>nexus</id>
+	      <name>KK FUNDA Releases Nexus Repository</name>
+	      <url>http://172.31.40.189:8081/repository/flipkart-release/</url>
+	    </repository>
+
+	    <snapshotRepository>
+	      <id>nexus</id>
+	      <name>KK FUNDA Snapshot Nexus Repository </name>
+	      <url>http://13.126.20.160:8081/repository/jio-snapshot/</url>
+	    </snapshotRepository>
+
+	</distributionManagement>
+    
 
 	<!-- Committing and updating changes through Maven, by using below mvn command. 
 		For Commiting mvn -Dmessage="Updated using maven" scm:checkin For updating 
